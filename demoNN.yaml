@@ -1,0 +1,24 @@
+---
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: demoNN
+  region: ap-northeast-2
+  version: "1.26"
+
+availabilityZones: ["ap-northeast-2a", "ap-northeast-2b", "ap-northeast-2c"]
+
+# prefix는 /16 또는 /24만 사용가능
+# vpc:
+#   cidr: 10.0.0.0/16
+  
+managedNodeGroups:
+- name: nodegroup
+  desiredCapacity: 2
+  instanceType: t3.small
+
+# To enable all of the control plane logs, uncomment below:
+# cloudWatch:
+#  clusterLogging:
+#    enableTypes: ["*"]
