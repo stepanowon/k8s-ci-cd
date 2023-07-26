@@ -12,7 +12,10 @@ availabilityZones: ["ap-northeast-2a", "ap-northeast-2b", "ap-northeast-2c"]
 # prefix는 /16 또는 /24만 사용가능
 # vpc:
 #   cidr: 10.0.0.0/16
-  
+vpc:
+  nat:
+    gateway: Disable
+    
 managedNodeGroups:
 - name: nodegroup
   desiredCapacity: 2
