@@ -16,10 +16,12 @@ vpc:
   nat:
     gateway: Disable
     
+# private subnet에 worker node를 배치하고 싶다면 privateNetworking: true 지정   
 managedNodeGroups:
 - name: nodegroup
   desiredCapacity: 2
   instanceType: t3.small
+# privateNetworking: true
 
 # To enable all of the control plane logs, uncomment below:
 # cloudWatch:
