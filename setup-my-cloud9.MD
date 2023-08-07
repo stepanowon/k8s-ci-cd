@@ -30,8 +30,8 @@
 - Themes 에서 밝은색으로 선택(예:Flat Theme) --> 선택적 작업
 - AWS Settings - Credentials 화면에서 AWS managed temporary credentials를 off 상태로 변경
 - 적용 후 터미널에서 다음 명령어 실행하여 기존 영구자격증명 삭제하고 Cloud9-Role로 자격증명이 변경되었는지 확인
-  * aws configure 명령 실행 후 region과 포맷만 설정 : ap-northeast-2, json
   * rm ~/.aws/credentials
+  * aws configure 명령 실행 후 region과 포맷만 설정 : ap-northeast-2, json
   * aws sts get-caller-identity 
 
 ### 유틸리티 도구 설치
