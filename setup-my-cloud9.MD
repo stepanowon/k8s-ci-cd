@@ -47,7 +47,7 @@ sudo ./aws/install --update
 sudo yum -y install jq bash-completion 
 
 ## kubectl 설치
-sudo curl --location -o /usr/local/bin/kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.26.4/2023-05-11/bin/linux/amd64/kubectl
+sudo curl --location -o /usr/local/bin/kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.27.6/2023-10-17/bin/linux/amd64/kubectl
 sudo chmod +x /usr/local/bin/kubectl
 kubectl completion bash >>  ~/.bash_completion
 . /etc/profile.d/bash_completion.sh
