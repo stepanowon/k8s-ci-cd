@@ -41,6 +41,18 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip
 sudo ./aws/install --update
 
+## EBS 볼륨 확장
+//크기를 조정할 파티션 확인
+lsblk
+//파티션 크기 조정
+sudo growpart /dev/nvme0n1p1 1
+//조정 여부 확인
+lsblk
+//파일 시스템 확장
+sudo resize2fs /dev/nvme0n1p1
+//확장된 파일 시스템 확인
+df -h
+
 ## 몇몇 유틸리티 설치
 ## * jq: json 파싱 유틸리티
 ## * bash_completion : bash 쉘 자동 완성 설정
