@@ -72,6 +72,8 @@ sudo growpart /dev/nvme0n1p1 1
 lsblk
 #파일 시스템 확장
 sudo resize2fs /dev/nvme0n1p1
+-또는
+sudo xfs_growfs -d /
 #확장된 파일 시스템 확인
 df -h
 ~~~
