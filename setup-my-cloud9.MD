@@ -67,11 +67,11 @@ sudo yum install docker -y
 #크기를 조정할 파티션 확인
 lsblk
 #파티션 크기 조정
-sudo growpart /dev/nvme0n1p1 1
+sudo growpart /dev/nvme0n1 1
 #조정 여부 확인
 lsblk
 #파일 시스템 확장
-sudo resize2fs /dev/nvme0n1p1
+sudo resize2fs /dev/nvme0n1
 -또는
 sudo xfs_growfs -d /
 #확장된 파일 시스템 확인
