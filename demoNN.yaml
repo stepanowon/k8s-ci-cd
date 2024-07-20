@@ -5,7 +5,7 @@ kind: ClusterConfig
 metadata:
   name: demoNN
   region: ap-northeast-2
-  version: "1.29"
+  version: "1.30"
 
 availabilityZones: ["ap-northeast-2a", "ap-northeast-2b", "ap-northeast-2c"]
 
