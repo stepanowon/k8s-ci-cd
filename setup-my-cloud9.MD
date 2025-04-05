@@ -52,7 +52,7 @@ curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.32.0/2024-12-20/bin/linu
 chmod +x ./kubectl
 mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$HOME/bin:$PATH
 echo 'export PATH=$HOME/bin:$PATH' >> ~/.bashrc
-  
+
 ## eksctl 설치
 curl -sLO "https://github.com/eksctl-io/eksctl/releases/latest/download/eksctl_Linux_amd64.tar.gz"
 tar -xzf eksctl_Linux_amd64.tar.gz
@@ -60,6 +60,14 @@ rm eksctl_Linux_amd64.tar.gz
 chmod +x ./eksctl
 mkdir -p $HOME/bin && mv ./eksctl $HOME/bin/eksctl && export PATH=$HOME/bin:$PATH
 echo 'export PATH=$HOME/bin:$PATH' >> ~/.bash_profile
+
+## kubectl 자동 완성 및 kubectl 대신 k 사용
+sudo apt install bash-completion
+source /usr/share/bash-completion/bash_completion
+
+echo 'source <(kubectl completion bash)' >>~/.bashrc
+echo 'alias k=kubectl' >>~/.bashrc
+echo 'complete -F __start_kubectl k' >>~/.bashrc
 
 ## docker 업데이트
 sudo yum install docker -y
