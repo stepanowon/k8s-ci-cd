@@ -68,6 +68,7 @@ source /usr/share/bash-completion/bash_completion
 echo 'source <(kubectl completion bash)' >>~/.bashrc
 echo 'alias k=kubectl' >>~/.bashrc
 echo 'complete -F __start_kubectl k' >>~/.bashrc
+source ~/.bashrc
 
 ## docker 업데이트
 sudo yum install docker -y
